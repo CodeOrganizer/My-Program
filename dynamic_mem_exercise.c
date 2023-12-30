@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 
 int main(){
@@ -38,11 +39,12 @@ int main(){
             return 1; // Exit the program with an error code
         }
         printf("Enter your employee id:\n");
-        scanf("%s", &reg[i]);
+        scanf("%s",reg[i]); //must remove & or your head will be fucked up.
     }
 
-    for(int i=0;i<3;i++){
-        printf("Employee %d: %s",i+1,reg[i]);
+   
+    for (int i = 0; i < 3; i++) {
+        printf("Employee %d id: %s\n", i + 1, reg[i]);
     }
 
     for(int i=0;i<3;i++){
