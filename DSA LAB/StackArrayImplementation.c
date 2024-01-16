@@ -76,6 +76,7 @@ int main(){
 
 //Output:
 /*
+
 *****Main Menu*****
 1. PUSH
 2. POP
@@ -84,4 +85,101 @@ int main(){
 5. EXIT
 Enter your option: 1
 
-Enter the element to be added on stack: 25*/
+Enter the element to be added on stack: 5
+
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 1
+
+Enter the element to be added on stack: 9
+
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 1
+
+Enter the element to be added on stack: 8
+
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 1
+
+Enter the element to be added on stack: 2
+
+Stack Overflow
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 4
+
+8
+9
+5
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 2
+
+The element is removed from the stack: 8
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 2
+
+The element is removed from the stack: 9
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 2
+
+The element is removed from the stack: 5
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 3
+
+Stack is empty.
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 2
+
+Stack Underflow
+*****Main Menu*****
+1. PUSH
+2. POP
+3. PEEK
+4. DISPLAY
+5. EXIT
+Enter your option: 5
+PS C:\Users\iraki\Desktop\My Program\DSA LAB>
+*/
