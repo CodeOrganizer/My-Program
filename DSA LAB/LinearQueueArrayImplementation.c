@@ -1,3 +1,5 @@
+//Question: Write a C program to implement linear queue operation insert,delete,display on array.
+//Code:
 #include<stdio.h>
 #define MAX 3
 int queue[MAX],front=-1,rear=-1;
@@ -60,3 +62,15 @@ do{
         }
 }while(option!=4);
 }
+
+//Output:
+/*
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 1
+
+Enter the element to be inserted in the queue: 5
+*/
