@@ -2,7 +2,7 @@
 //Code:
 
 #include<stdio.h>
-#include<string.h>
+
 
 #define MAX 3 //Maximum size of stack array
 int stack[MAX], top=-1; //top is initially null i.e., -1
