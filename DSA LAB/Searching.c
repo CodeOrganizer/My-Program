@@ -1,7 +1,7 @@
 //Question: Write a C program to apply linear search on an array.
 //Code:
 #include<stdio.h>
-#include<stdlib.h>
+
 void linear_search(int arr[],int key,int size){
     int pos=-1;
     for(int i=0;i<size;i++){
