@@ -26,14 +26,7 @@ int queue_delete(int queue[]){
     if(front==-1&&rear==-1){
         printf("\nQueue Underflow");
         return -1;
-    x=queue[front];
-    if(front==rear)
-        front=rear=-1;
-    else if(front==MAX-1)
-        front==0;
-    else
-        front++;
-        return x;
+    
     }
     else{
         x=queue[front];
@@ -44,7 +37,7 @@ int queue_delete(int queue[]){
     }
 }
 void display(int queue[]){
-    if(front==-1||front>rear)
+    if(front==-1 && rear==-1)
         printf("\nQueue is empty");
     else{
         for(int i=front;i<=rear;i++)
