@@ -1,24 +1,39 @@
-//Question: Write a C program to implement linear queue operation insert,delete,display on array.
+//Question: Write a C program to implement circular queue operation insert,delete,display on array.
 //Code:
 #include<stdio.h>
 #define MAX 3
 int queue[MAX],front=-1,rear=-1;
 
 void queue_insert(int queue[],int val){
-    if(rear==MAX-1)
+    if(front==0 && rear==MAX-1){
         printf("\nQueue Overflow");
-    else {
-    if(front==-1 && rear==-1)
+        }
+    else if(front==-1 && rear==-1){
         front=rear=0;
-    else
+        queue[rear]=val;
+        }
+    else if(rear==MAX-1 && front!=0){
+        rear=0;
+        queue[rear]=val;
+        }
+    else{
         rear++;
-    queue[rear]=val;}
+        queue[rear]=val;
+    }
 }
 int queue_delete(int queue[]){
     int x;
-    if(front==-1||front>rear){
+    if(front==-1&&rear==-1){
         printf("\nQueue Underflow");
         return -1;
+    x=queue[front];
+    if(front==rear)
+        front=rear=-1;
+    else if(front==MAX-1)
+        front==0;
+    else
+        front++;
+        return x;
     }
     else{
         x=queue[front];
@@ -70,7 +85,87 @@ do{
 2. DELETE
 3. Display
 4. EXIT
+Enter your option: 1                                                                 
+
+Enter the element to be inserted in the queue: 8
+
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 1
+
+Enter the element to be inserted in the queue: 6
+
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
 Enter your option: 1
 
 Enter the element to be inserted in the queue: 5
+
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 1
+
+Enter the element to be inserted in the queue: 2
+
+Queue Overflow
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 3
+8 6 5
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 2
+The element removed from the queue: 8
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 2
+The element removed from the queue: 6
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 2
+The element removed from the queue: 5
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 2
+
+Queue Underflow
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 3
+
+Queue is empty
+*****Main Menu*****
+1. INSERT
+2. DELETE
+3. Display
+4. EXIT
+Enter your option: 4
+PS C:\Users\iraki\Desktop\My Program\DSA LAB>
 */
