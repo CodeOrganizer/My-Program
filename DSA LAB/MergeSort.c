@@ -10,13 +10,10 @@ int i=l,j=mid+1,k=l,temp[SIZE];
         else
             temp[k++]=array[j++];
     }   
-    for(;i<mid;i++)
-            temp[k++]=array[i++];
-    for(;j<h;j++)
     for(;i<=mid;i++)
-            temp[k++]=array[i++];
+            temp[k++]=array[i];
     for(;j<=h;j++)
-            temp[k++]=array[j++];
+            temp[k++]=array[j];
     for(int i=l;i<k;i++)
             array[i]=temp[i];
 }
