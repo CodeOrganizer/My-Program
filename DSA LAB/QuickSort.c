@@ -1,8 +1,6 @@
 //Question 1: Write a C program for sorting an array using quick sort.
 //Code:
 #include<stdio.h>
-//
-
 void swap(int *a,int *b){
     int temp=*a;
     *a=*b;
@@ -16,26 +14,26 @@ int partition(int array[], int low, int high) {
 while(i<j){
     do{
         i++;
-    }while(array[i]>=pivot);
+    }while(array[i]<=pivot);
     do{
         j--;
-    }while(array[j]<pivot);
+    }while(array[j]>pivot);
     if(i<j)
     swap(&array[i],&array[j]);
 }
 swap(&array[low],&array[j]);
 return j;
-    int i = high + 1; // Index of the smaller element
+    // i = high + 1; // Index of the smaller element
 
-    for (int j = high; j > low; j--) {
-        // If the current element is greater than the pivot
-        if (array[j] > pivot) {
-            i--; // Decrement index of the smaller element
-            swap(&array[i], &array[j]);
-        }
-    }
-    swap(&array[i - 1], &array[low]);
-    return (i - 1);
+    // for (int j = high; j > low; j--) {
+    //     // If the current element is greater than the pivot
+    //     if (array[j] > pivot) {
+    //         i--; // Decrement index of the smaller element
+    //         swap(&array[i], &array[j]);
+    //     }
+    // }
+    // swap(&array[i - 1], &array[low]);
+    // return (i - 1);
 }
 
 void quick_sort(int array[],int l,int h){
@@ -43,7 +41,6 @@ void quick_sort(int array[],int l,int h){
     if(l<h){
             j=partition(array,l,h);
             quick_sort(array,l,j);
-            quick_sort(array,l,j-1);
             quick_sort(array,j+1,h);
     }
 }
@@ -62,7 +59,7 @@ int main(){
     printf("}");
 
     quick_sort(array,0,size);
-    quick_sort(array,0,size-1);
+
 
     printf("\nSorted array: { ");
     for(int i=0;i<size;i++)
