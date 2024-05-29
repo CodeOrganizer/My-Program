@@ -1,5 +1,6 @@
 *.exe
 .vscode
+.class
 2d_array.c
 ArrAvg.c
 arrAvgLgrst.c

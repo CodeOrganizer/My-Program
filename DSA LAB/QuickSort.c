@@ -10,7 +10,7 @@ void swap(int *a,int *b){
 int partition(int array[], int low, int high) {
     int pivot = array[low]; // Select the first element as the pivot
     int i=low;
-    int j=high;
+    int j=high+1;
 while(i<j){
     do{
         i++;
@@ -58,7 +58,7 @@ int main(){
         printf("%d ",array[i]);
     printf("}");
 
-    quick_sort(array,0,size);
+    quick_sort(array,0,size-1);
 
 
     printf("\nSorted array: { ");

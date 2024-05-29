@@ -23,7 +23,7 @@ else if(h==l+1){
     return MaxMin;
 }
 
-    int mid=l+(h-l)/2;
+    int mid=(l+h)/2;
     leftMaxMin=findMaxMin(arr,l,mid);
     rightMaxMin=findMaxMin(arr,mid+1,h);
     if(leftMaxMin.max>rightMaxMin.max)

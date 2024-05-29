@@ -1,20 +1,20 @@
 //Question 1: Write a C program for sorting an array using merge sort.
 //Code:
 #include<stdio.h>
-#define SIZE 10
+#include<stdlib.h>
 void merge(int array[],int l,int mid,int h){
-int i=l,j=mid+1,k=l,temp[SIZE];
+int i=l,j=mid+1,k=l,temp[h+1];
     while(i<=mid && j<=h){
         if(array[i]<array[j])
             temp[k++]=array[i++];
         else
             temp[k++]=array[j++];
     }   
-    for(;i<=mid;i++)
-            temp[k++]=array[i];
-    for(;j<=h;j++)
-            temp[k++]=array[j];
-    for(int i=l;i<k;i++)
+    while(i<=mid)
+        temp[k++]=array[i++];
+    while(j<=h)
+        temp[k++]=array[j++];
+    for(int i=l;i<=h;i++)
             array[i]=temp[i];
 }
 void merge_sort(int array[],int l,int h){
@@ -27,14 +27,11 @@ void merge_sort(int array[],int l,int h){
     }
 }
 int main(){
-    int array[SIZE];
+    int *array;
     int n;
-    do{printf("Enter the number of elements in the array [Maximum 10]: ");
+    printf("Enter the number of elements in the array: ");
     scanf("%d",&n);
-    if(n>SIZE)
-        printf("Size limit exceeded.\n");
-    }while(n>SIZE);
-        printf("Enter the elements:\n");
+    array=(int*)malloc(sizeof(int)*n);
     for(int i=0;i<n;i++)
         scanf("%d",&array[i]);
     
@@ -43,13 +40,14 @@ int main(){
         printf("%d ",array[i]);
     printf("}");
 
-    merge_sort(array,0,SIZE-1);
+    merge_sort(array,0,n-1);
 
     printf("\nSorted array: { ");
     for(int i=0;i<n;i++)
         printf("%d ",array[i]);
     printf("}");
-    
+
+    free(array);
     return 0;
 }
 
