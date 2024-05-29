@@ -44,7 +44,7 @@ void dijkstra(int graph[][V],int src)
         sptSet[u]=true;     //After getting min_index we should mark the selected vertex
         for(int n=0;n<V;n++)
         {
-            if(sptSet[n]==false,graph[u][n]!=inf &&dist[u]+graph[u][n]<dist[n])
+            if(sptSet[n]==false && graph[u][n]!=inf && dist[u]+graph[u][n]<dist[n])
                 dist[n]=dist[u]+graph[u][n];
         }
     }
