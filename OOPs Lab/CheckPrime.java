@@ -8,9 +8,9 @@ class Prime
 		else
 		{
 
-			for(int i=2;i<=2;i++)
+			for(int i=2;i<=n/2;i++)
 			{
-				if(n%2==0)
+				if(n%i==0)
 				{
 					flag=1;
 					break;
@@ -23,11 +23,11 @@ class Prime
 			return true;
 	}
 
-        public static void primeInRange(int h,int l)
+    public static void primeInRange(int l,int h)
 	{
-		for(int i=h;i<=l;i++)
+		for(int i=l;i<=h;i++)
 		{
-			if(Prime.isPrime(i)==true)
+			if(Prime.isPrime(i))
 				System.out.print(i+" ");
 		}
 	}
@@ -39,19 +39,19 @@ class CheckPrime
 	{
 		try
 		{
-			 if(args.length==1)
+			if(args.length==1)
 			{
-				if(Prime.isPrime(Integer.parseInt(args[0]))==true)
+				if(Prime.isPrime(Integer.parseInt(args[0])))
 					System.out.println(args[0]+" is prime.");
 				else
 					System.out.println(args[0]+" is not prime.");
 			}
 			else
 				Prime.primeInRange(Integer.parseInt(args[0]),Integer.parseInt(args[1]));
-			}
+		}
 		catch(Exception e)
 		{
-			System.out.println(e+"\nUsage: CheckPrime <valu1> <value2>\nUse single value to check for prime number\nUse two values to check prime number within range");
+			System.out.println(e+"\nUsage: CheckPrime <value1> <value2>\nUse single value to check for prime number\nUse two values to check prime number within range");
 		}
 	}
 }

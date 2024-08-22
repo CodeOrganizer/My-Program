@@ -1,5 +1,5 @@
 class Point2      
-{
+{   
     private int x;
     private int y;
 
@@ -15,7 +15,7 @@ class Point2
     {
         this.x=x;this.y=y;
     }
-    public  void getCoordinate(int x,int y)
+    public  void getCoordinate()
     {
       System.out.println("("+x+","+y+")"); 
     }
@@ -23,7 +23,7 @@ class Point2
     {
        System.out.println(Math.sqrt(Math.pow(x,2)+Math.pow(y,2)));
     }
-    public void getDist(Point2 p)
+    public void getDistance(Point2 p)
     {
        System.out.println(Math.sqrt(Math.pow((p.x-x),2)+Math.pow((p.y-y),2)));
     }
@@ -37,8 +37,8 @@ class Point2
 public class PointTest{
 
     public static void main(String[] args) {
-       Point p1=new Point(2,2);
-       Point p2=new Point(2,2);
+       Point2 p1=new Point2(2,2);
+       Point2 p2=new Point2(2,2);
        p1.getDistance();
        System.out.println(p1.isEqual(p2));
     }

@@ -58,7 +58,6 @@ class Eval
                     case '-': stk.push(temp1-temp2);break;
                     case '*': stk.push(temp1*temp2);break;
                     case '/': stk.push(temp1/temp2);break;
-                    default:
                 }
             } 
         }
